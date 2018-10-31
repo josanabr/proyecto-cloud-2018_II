@@ -13,7 +13,7 @@ A continuacion se describen las secciones de las que consta el presente document
 
 * [Metas del proyecto](#metas-del-proyecto)
 * [Como lograr lo planteado](#como-lograr-lo-planteado)
-* [Construyento los contenedores](#construyendo-los-contenedores)
+* [Contenedor con Flask](#contenedor-con-flask)
 * [Pandas en contenedores](#pandas-en-contenedores)
 * [Publicacion de los *web services* en Amazon Beanstalk](#publicacion-de-los-web-services-en-amazon-beanstalk)
 * [Entregables](#entregables)
@@ -30,24 +30,25 @@ Las tareas que debe lograr desarrollar su aplicativo basado en *web services* es
 * Consultar el numero de filas y columnas que tienen esos datos
 * Mostrar el nombre de los atributos de los datos
 * Mostrar el tipo de datos de los atributos
-* Se debe permitir calcular funciones de agregacion (media, mediana, mayor, menor) sobre al menos un dato. Dos o mas datos sera un **plus**. Es decir, si usted tiene unos datos que tienen por ejemplo: edad, salario, nombre, anno de nacimiento; el *web service* deberia permitir el calcular (en una sola invocacion) o la edad promedio o la edad promedio y el salario promedio.
+* Se debe permitir calcular funciones de agregacion (media, mediana, mayor, menor) sobre al menos un dato. Dos o mas datos a la vez sera un **plus**. Es decir, si usted tiene unos datos que tienen por ejemplo: edad, salario, nombre, anno de nacimiento; el *web service* deberia permitir el calcular (en una sola invocacion) o la edad promedio o la edad promedio y el salario promedio.
 * Un *web service* deberia permitir la agrupacion de datos y con los datos agrupados aplicar una funcion de agregacion. Por ejemplo, el *web service* deberia permitir agrupar los datos por annos y sacar el promedio de salario. Se debera permitir hacer agrupacion de al menos un dato. Dos o mas datos por agrupacion sera un **plus**.
+* **BONUS** desarrollar un *web service* que entregue una grafica dados un par de datos. Ejemplo, dado un conjunto de datos que tiene una poblacion, agrupar los datos por anno y a cada anno calcular el ingreso salarial promedio.
 
 ## Como lograr lo planteado
 
 Para lograr lo planteado usted necesita de un entorno donde desarrollar su *web service*.
 Al final del curso se uso Docker como herramienta para la creacion de entornos de virtualizacion. Para los entornos de *web services* se uso Flask y para el procesamiento de los datos se estudio la herramienta Pandas.
 
-## Construyendo los contenedores
+# Obteniendo los contenedores 
+
+## Contenedor con Flask
 
 Para llevar a cabo la consolidacion del entorno de Desarrollo y Despliegue, usted hara uso de contenedores de Docker. 
 Durante la clase se llevo a cabo la creacion de varios de estos contenedores. 
 
 Para llevar a cabo en particular este proyecto usted necesita de un contenedor que tenga desplegado, Flask y Pandas.
-En la clase se hizo el despliegue de ambos contenedores.
-
-* [Flask](http://flask.pocoo.org/) Flask es un microframework para Python y el cual permite el desarrollo de aplicacions centradas en la web.
-Durante la clase se presento paso a paso el desarrollo de una aplicacion basada en *web services* y que implementa una funcionalidad basica del metodo [*Getting Things Done*](https://en.wikipedia.org/wiki/Getting_Things_Done).
+En la clase se hizo el despliegue de ambos contenedores. 
+Para el caso de Flask en la clase se presento la herramienta a traves del desarrollo de una aplicacion basada en *web services* y que implementa una funcionalidad basica del metodo [*Getting Things Done*](https://en.wikipedia.org/wiki/Getting_Things_Done).
 Esta aplicacion se encuentra disponible en [Github](https://github.com/josanabr/dockerflask2018/tree/step6).
 
 ## Pandas en contenedores
@@ -97,6 +98,8 @@ curl -i -H "Content-Type: application/json" -X POST -d '{ "url": "https://raw.gi
 
 Para llevar a cabo la publicacion de este aplicativo en Amazon Beanstalk se creo el [siguiente video](https://www.youtube.com/watch?v=UzrRMandFt0&feature=youtu.be).
 En este [enlace](https://docs.google.com/presentation/d/172ayhs3Bfp32ivxpE6PjMCsbTVwQlrvBDcof4iYFWzE/edit?usp=sharing) se presentan unos slides que pueden servir de guia para saber con que se debe contar para poder desplegar un contenedor en Amazon Elastic Beanstalk y hacerlo accesible via *web services*
+
+[Aqui](Dockerrun.aws.jso) usted puede encontrar un archivo JSON que sigue la estructura requerida por Amazon para desplegar un contenedor en Amazon Beanstalk.
 
 ## Entregables
 
