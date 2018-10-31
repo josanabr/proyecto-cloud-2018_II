@@ -56,7 +56,7 @@ Esta aplicacion se encuentra disponible en [Github](https://github.com/josanabr/
 [Pandas](https://pandas.pydata.org/) es una libreria en Python que integra diferentes herramientas para el analisis de datos. 
 
 Durante la clase tambien se desarrollo un contenedor que contenia la funcionalidad de [Pandas](https://github.com/josanabr/pandas).
-Este contenedor se caracteriza porque hereda del contenedor que se indico en la [seccion anterior](#construyendo-los-contenedores).
+Este contenedor se caracteriza porque hereda del contenedor que se indico en la [seccion anterior](#contenedor-con-flask).
 
 Durante la clase se hizo un recorrido por Pandas y se trabajo con estos [slides](https://docs.google.com/presentation/d/1pUp34lXHW8vqzV4xkk12ENSX3YpsipdeV7xPwQAgwyI/edit?usp=sharing).
 
@@ -99,7 +99,7 @@ curl -i -H "Content-Type: application/json" -X POST -d '{ "url": "https://raw.gi
 Para llevar a cabo la publicacion de este aplicativo en Amazon Beanstalk se creo el [siguiente video](https://www.youtube.com/watch?v=UzrRMandFt0&feature=youtu.be).
 En este [enlace](https://docs.google.com/presentation/d/172ayhs3Bfp32ivxpE6PjMCsbTVwQlrvBDcof4iYFWzE/edit?usp=sharing) se presentan unos slides que pueden servir de guia para saber con que se debe contar para poder desplegar un contenedor en Amazon Elastic Beanstalk y hacerlo accesible via *web services*
 
-[Aqui](Dockerrun.aws.jso) usted puede encontrar un archivo JSON que sigue la estructura requerida por Amazon para desplegar un contenedor en Amazon Beanstalk.
+[Aqui](Dockerrun.aws.json) usted puede encontrar un archivo JSON que sigue la estructura requerida por Amazon para desplegar un contenedor en Amazon Beanstalk.
 
 ## Entregables
 
